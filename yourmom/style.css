@@ -1,0 +1,19 @@
+body
+{
+background-color: slategray;
+
+grid-template-columns: 1fr;
+
+}
+
+
+@media screen and (min-width: 700px) {
+    body { 
+        background-color: hotpink;
+    }}
+
+@media screen and (min-width: 900px) {
+    body { 
+    background-color: salmon;
+        }}
+    
