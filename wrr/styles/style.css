@@ -126,8 +126,27 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+.page2{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.faqt{
+    background-color: #fb9b1a;
+    height: 50px;
+    width: 100px;
+    justify-self: center;
+}
+
 
 /* ID */
+#faq{
+    grid-column: 1/2;
+    justify-content: center;
+    text-align: center;
+}
+#faqpic{
+    grid-column: 2/3;
+}
 #hero-img{
     width: 100%;}
 #background{
@@ -167,7 +186,58 @@ grid-row: 4/9;
     z-index: -1;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Media */
+
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
         display: block;
