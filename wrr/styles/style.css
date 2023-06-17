@@ -132,20 +132,28 @@ nav{
 }
 .faqt{
     background-color: #fb9b1a;
-    height: 50px;
-    width: 100px;
-    justify-self: center;
+    border-radius: 15px;
+    margin: auto 0;
+    width: ;
 }
 
 
 /* ID */
+
 #faq{
+    padding: 20px;
     grid-column: 1/2;
-    justify-content: center;
+    background-color: #fcbc94;
+    border: 5px solid #6f7364;
+    border-radius: 40px;
     text-align: center;
+    height: max-content;
+   
+
 }
 #faqpic{
     grid-column: 2/3;
+    width: 100%;
 }
 #hero-img{
     width: 100%;}
