@@ -24,6 +24,8 @@ a{
     height: 2px;
     background-color: black;
     color: black;
+    border: 1px solid black;
+    font-size: x-small;
 }
 img {
     width: 200px;
