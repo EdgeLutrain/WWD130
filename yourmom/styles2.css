@@ -1,0 +1,47 @@
+body { display: grid;
+grid-template-columns: Repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+}
+
+.one {
+    color: red;
+    grid-column: 1/-1;
+    grid-row: 1;
+    text-align: center;
+    border: 5px solid blue;
+    font-size: 40px;
+}
+.two {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    text-align: right;
+    background-color: black;
+    color: aliceblue;
+    height: 50px;
+}
+.three {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    text-align: end;
+    margin: auto 0;
+}
+.four {
+    grid-row: 4/5;
+    grid-column: 3/4;
+    background-image: url(https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    text-align: center;
+    margin: auto 0;
+    border: 20px none none;
+    padding: 20px;
+    color: azure;
+}
+.five {
+    grid-row: 5/-1;
+    grid-column: 1/-1;
+    text-align: center;
+    margin: auto 0;
+    border: 7px groove blue;
+    font-size: 50px;
+}
