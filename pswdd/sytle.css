@@ -1,13 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Rock+Salt&display=swap');
+:root {
+    --heading-font: "Rock Salt";
+    --paragraph-font: Montserrat, Helvetica, sans-serif;
+}
 body{
-    background-color: greenyellow;
+    margin: 0;
+    background-color: #fceeee;
 }
-.card{
-grid-template-columns: 1 fr 2fr;
-width: 470px;
-border: 5px solid black ;
+/* header */
+header {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    background-color: #F79A7D;
+
 }
-.textbox{
-    padding-left: 30px ;
-    padding-right: 30px;
-    padding-bottom: 25px;
+#logo {
+    grid-column: 1/2;
+}
+#headernav{
+    font-family: "Rock Salt", Monserrat, Helvetica ;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: auto 0;
+    border: 5px solid white;
+    height: 50px;
+    padding: 5px;
+}
+nav {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#logo { 
+    padding: 10px;
+
 }
