@@ -1,33 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shadows+Into+Light&family=Varela+Round&display=swap');
+
+ul{
+    padding-inline-start: 0px;
+}
 :root {
     --heading-font: "Rock Salt";
-    --paragraph-font: Montserrat, Helvetica, sans-serif;
+    --paragraph-font: "Shadows Into Light", Helvetica, sans-serif;
 }
 body{
+    display: grid;
     margin: 0;
     background-color: #fceeee;
+    grid-template-rows: 150px 6fr .2fr;
 }
 /* header */
 header {
     display: grid;
     grid-template-columns: 2fr 5fr;
     background-color: #F79A7D;
-
+    grid-row: 1/2;
+    border-bottom: 5px solid #ce3d15;
 }
-#logo {
+.logo {
     grid-column: 1/2;
+    margin: auto 0;
 }
+
+#logo_img {
+    border: 5px solid #F46F4A;
+    margin-left: 7px;
+    margin-right: 7px;
+    box-shadow: 3px 3px 6px #00000086;
+}
+
 #headernav{
-    font-family: "Rock Salt", Monserrat, Helvetica ;
-    font-size: 20px;
+    font-family: "Rock Salt", Helvetica, sans-serif ;
+    font-size: 40px;
+   
+    
+    
 }
 
 nav a {
     text-decoration: none;
     margin: auto 0;
     border: 5px solid white;
-    height: 50px;
-    padding: 5px;
+    height: 70px;
+    padding-top: px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;    
+    background-color: #F46F4A;
+    color: azure;  
+    box-shadow: 3px 3px 6px #00000086;
+
+}
+nav a:hover {
+    text-decoration: none;
+    margin: auto 0;
+    border: 5px solid white;
+    height: 70px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;     
+    background-color: #ce3207;
+    color: azure;
 }
 nav {
     display: flex;
@@ -40,3 +78,192 @@ nav {
     padding: 10px;
 
 }
+
+/* gallery */ 
+ main { 
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    margin-top: 30px;
+    margin-bottom: 1px;
+  }
+div.gallery {
+    border: 3px solid #ce3d15;
+    background-color: #F79A7D;
+  }
+  
+div.gallery:hover {
+    border: 3px solid #f1714e;
+    background-color: #F79A7D;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family: "Rock Salt", Helvetica, sans-serif ;
+    color: azure;
+  }
+
+.gallery_m{
+    margin-left: 10px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+.responsive {
+    padding: 5px 6px;
+    width: 95%;
+    }
+.artist {
+grid-column: 2/3;
+grid-row: 1/3;
+   
+}
+
+#box_move {
+    position: fixed;
+    width: var(--spacing 2);
+    height: var(--spacing 2);
+    background-color: #F46F4A; 
+    border: 3px solid #ce3d15;
+    margin-right: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 5px;
+
+}
+
+.artist section img {
+    width: 90%;
+    border: 2px inset black;
+    min-width: 50px;
+    margin: auto 0;
+    
+}
+
+.artist section p {
+    font-family:sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+}
+
+
+
+/* footer */
+
+
+footer {
+    display: flex;
+    height: 100%;
+    background-color:  #F79A7D;
+    border-top: 5px solid #ce3d15;
+    flex-direction: row;
+    justify-content: center;
+}
+.contact{
+    text-align: center;
+    padding: 10px;
+    margin: auto 0;
+    color: black;
+}
+.contact li{
+    list-style: none;
+    font-family: Helvetica, sans-serif;
+    margin: 16px;
+
+}
+.contact li a {
+    color: white;
+    text-decoration: none;
+    font-family:sans-serif, Arial, Helvetica, sans-serif;
+    background-color: #F46F4A;
+    border: 1px solid white ;
+    padding: 2px;
+    font-size: 20px;
+}
+
+.contact li a:hover {
+    color: white;
+    text-decoration: none;
+    font-family:sans-serif, Arial, Helvetica, sans-serif;
+    background-color:#ce3d15;
+    border: 1px solid white ;
+    padding: 2px;
+    font-size: 20px;
+}
+
+
+footer h3 {
+    font-family: "Rock Salt", Helvetica, sans-serif ;
+    color: black;
+    text-align: center;
+    margin: auto 0;
+}
+#peach{
+    color: rgb(61, 41, 30);
+    padding: 10px;
+    margin: auto 0;
+}
+
+.sitemap ul { 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.sitemap { 
+    padding: 10px;
+
+}
+.sitemap ul a {
+    color: white;
+    text-decoration: none;
+    font-family:sans-serif, Arial, Helvetica, sans-serif;
+    background-color: #F46F4A;
+    border: 1px solid white ;
+    padding: 2px;
+    font-size: 20px;  
+}
+.sitemap ul a:hover {
+    color: white;
+    text-decoration: none;
+    font-family:sans-serif, Arial, Helvetica, sans-serif;
+    background-color:#ce3d15;
+    border: 1px solid white ;
+    padding: 2px;
+    font-size: 20px;
+
+}
+
+
+
+
+
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
