@@ -27,10 +27,14 @@ header {
 }
 
 #logo_img {
+    width: 50vw;
     border: 5px solid #F46F4A;
     margin-left: 7px;
     margin-right: 7px;
     box-shadow: 3px 3px 6px #00000086;
+    max-width: 500px;
+    max-height: 100px;
+
 }
 
 #headernav{
@@ -42,30 +46,39 @@ header {
 }
 
 nav a {
+    max-height: 50px;
+    max-width: 281px;
     text-decoration: none;
     margin: auto 0;
-    border: 5px solid white;
-    height: 70px;
-    padding-top: px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 10px;    
+    border: calc(1px + .3vw) solid white;
+    height: 4vw;
+    padding-top: 0;
+    padding-bottom: calc(10px + 1vw);
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
     background-color: #F46F4A;
-    color: azure;  
+    color: azure;
     box-shadow: 3px 3px 6px #00000086;
+    font-size: calc(10px + 1.5vw);
+
 
 }
 nav a:hover {
+    max-height: 50px;
+    max-width: 281px;
     text-decoration: none;
     margin: auto 0;
-    border: 5px solid white;
-    height: 70px;
-    padding-top: 0px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 10px;     
+    border: calc(1px + .3vw) solid white;
+    height: 4vw;
+    padding-top: 0;
+    padding-bottom: calc(10px + 1vw);
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;   
     background-color: #ce3207;
     color: azure;
+    box-shadow: 3px 3px 6px #00000086;
+    font-size: calc(10px + 1.5vw);
+
 }
 nav {
     display: flex;
@@ -121,7 +134,8 @@ div.desc {
     width: 95%;
     }
 .artist {
-   
+   grid-column: 2/3;
+   grid-row: 1/2;
 }
 
 #box_move {
@@ -239,8 +253,179 @@ footer h3 {
     font-size: 20px;
 
 }
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 
+/* gallery */
+.gallery_page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 175px 6fr;
+
+}
+
+.gallery3{
+    display: flex;
+    flex-direction: column;
+    font-family: "Shadows Into Light", Helvetica, sans-serif;
+    grid-column: 1/-1;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.gallery3 h2 {
+    text-align: center;
+    background: #fceeee;
+    border-radius: 30px;
+}
+
+#grade {
+    background-image: linear-gradient(60deg, #ff9966, #ff5e62); 
+    border-radius: 37px;
+    padding: 10px; 
+      
+}
+
+  
+  h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  .row {
+    margin: 8px 30px;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+
+    display: none; /* Hide columns by default */
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .content img {
+    min-width: 150px;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: inline-block;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background color to the active button */
+  .btn.active {
+    background-color: #666;
+     color: white;
+  }
+  #myBtnContainer {
+    margin: 5px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 960px) {
+    header{
+    }
+    nav{
+        flex-direction: column-reverse;
+        gap: 2px;
+        margin: auto 0;
+    }
+    nav a {
+        max-height: 50px;
+        max-width: 281px;
+        text-decoration: none;
+        margin: auto 0;
+        border: calc(1px + .3vw) solid white;
+        height: 2.5vw;
+        width: 13vw;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #F46F4A;
+        color: azure;
+        box-shadow: 3px 3px 6px #00000086;
+        font-size: calc(.1px + 1.2vw);
+        text-align: center;
+    
+    }
+    nav a:hover {
+        max-height: 50px;
+        max-width: 281px;
+        text-decoration: none;
+        margin: auto 0;
+        border: calc(1px + .3vw) solid white;
+        height: 2.5vw;
+        width: 13vw;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;   
+        background-color: #ce3207;
+        color: azure;
+        box-shadow: 3px 3px 6px #00000086;
+        font-size: calc(.1px + 1.2vw);
+        text-align: center;
+    
+    
+
+    }    
 
 
 
@@ -255,11 +440,4 @@ footer h3 {
   @media only screen and (max-width: 500px) {
     .responsive {
       width: 100%;
-    }
-  }
-  
-  .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+    }}

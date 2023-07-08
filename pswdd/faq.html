@@ -5,65 +5,162 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="sytle.css">
 </head>
 <body>
     <header>
-    <a href="index.html">
-    <img src="" alt="Logo">
-    </a>
-
-    <nav>
-    <a href="index.html" id="home_button">Home</a>
-    <a href="comission.html" id="commissions_button">Commissions</a>
-    <a href="faq.html" id="faq_button">FAQ</a>
-    </nav>   
-
+        <a class="logo" href="index.html">
+        <img id="logo_img" src="image/table.png" alt="Logo">
+        </a>
+    
+        <nav id="headernav">
+        <a href="index.html" id="home_button">Home</a>
+        <a href="comission.html" id="commissions_button">Commissions</a>
+        <a href="faq.html" id="faq_button">Gallery</a>
+        </nav>   
+    
+    
     </header>
 
-    <main>
-        <div>
-            <div>
-                <img src="" alt="">
-            </div>
-            <div>
-                <img src="" alt="">
-            </div>
-            <ul>
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
-            </ul>
-        </div>
 
-        <div>
-            <p>4</p>
-            <h2>5</h2>
-            <ul>
-                <a href = "https://www.instagram.com/persici890/">Instagram</a>
-                <li>Discord:<br>Username: mienfoo @mienfoo890</li>
-            </ul>
+    <main class="gallery_page">
+        <section class='gallery3'>
+        <div id="grade"><h2>My Peice</h2></div>
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+          <button class="btn" onclick="filterSelection('orgrinals')"> orgrinals</button>
+          <button class="btn" onclick="filterSelection('anime')"> anime</button>
+          <button class="btn" onclick="filterSelection('people')"> People</button>
+          <button class="btn" onclick="filterSelection('people')"> SPYxFamily</button>
         </div>
+        </section>
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+          <div class="column orgrinals">
+            <div class="content">
+              <img src="image/Gallery/autumn.png" alt="autumn" style="width:100%">
+              <h4>Autumn</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column orgrinals">
+            <div class="content">
+              <img src="image/Gallery/bee.png" alt="Bee" style="width:100%">
+              <h4>Bee</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column anime">
+            <div class="content">
+              <img src="image/Gallery/bumblepup_improved.png" alt="Bumblepup" style="width:100%">
+              <h4>Bumblepup</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column orgrinals">
+            <div class="content">
+              <img src="image/Gallery/bunny_vision_girl.png" alt="Bunny Girl" style="width:100%">
+              <h4>Bunny Girl</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column orgrinals">
+            <div class="content">
+              <img src="image/Gallery/destroy_me_right_here.png" alt="Destroy" style="width:100%">
+              <h4>Destroy</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column orgrinals">
+            <div class="content">
+              <img src="image/Gallery/i_know.png" alt="Know" style="width:100%">
+              <h4>Know</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column anime">
+            <div class="content">
+              <img src="image/Gallery/Nazo.png" alt="Nazo" style="width:100%">
+              <h4>Nazo</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column orgrinals">
+            <div class="content">
+              <img src="image/Gallery/the_heat_bearing_night_will_still_arrive.png" alt="Will Stay" style="width:100%">
+              <h4>Will Stay</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        
+        </div>
+        <!-- END GRID -->
+        </div>   
+<script>
+ filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
 
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}   
+</script>
 
     </main>
 
     <footer>
-        <div>
-        
+        <div class="contact">
             <ul>
                 <h3>Contact Us & Social</h3>
-                <a href = "https://www.instagram.com/persici890/">Instagram</a>
-                <li>Discord:<br>Username: mienfoo @mienfoo890</li>
+               <li><a href = "https://www.instagram.com/persici890/">Instagram</a></li>
+                <li><a href="https://discord.com/channels/@me"> Discord: mienfoo @mienfoo890</a></li>
             </ul>
+            
         </div>
-        <div>
+        <h3 id="peach">Peach n Chibi &copy; - 2023</h3>
+        <div class="sitemap">
             <ul>
-                Peach n Chibi &copy; - 2023
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <h3>Pages</h3>
+                <h3>Site Map</h3>
                 <a href="index.html" id="home_button">Home</a>
                 <a href="comission.html" id="commissions_button">Commissions</a>
                 <a href="faq.html" id="faq_button">FAQ</a>
