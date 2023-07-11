@@ -34,15 +34,11 @@ header {
     box-shadow: 3px 3px 6px #00000086;
     max-width: 500px;
     max-height: 100px;
-
 }
 
 #headernav{
     font-family: "Rock Salt", Helvetica, sans-serif ;
-    font-size: 40px;
-   
-    
-    
+    font-size: 40px;  
 }
 
 nav a {
@@ -362,7 +358,40 @@ footer h3 {
   #myBtnContainer {
     margin: 5px;
   }
+/* Comission page */
 
+main div {
+    font-family: "Rock Salt", Helvetica, sans-serif;
+    text-align: center;
+}
+
+#img_box {
+background-color: #F46F4A;
+grid-column: 1/2;
+padding: 20px ;
+
+}
+#pricing_box {
+background-color: #F46F4A;
+grid-column: 2/3;   
+padding: 20px ;
+}
+#sumbit_inst {
+background-color: #F46F4A;
+grid-column: 1/-1;
+padding: 20px ;
+}
+
+.main_grid_comis {
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    grid-template-rows: 2fr 1fr;
+    gap: 10px;
+}
+.color_box {
+    background-image: linear-gradient(60deg, #ff9966, #ff5e62);
+    padding: 20px;
+}
 
 
 
@@ -427,16 +456,6 @@ footer h3 {
 
     }    
 
-
-
-  
-  @media only screen and (max-width: 700px) {
-    .responsive {
-      width: 49.99999%;
-      margin: 6px 0;
-    }
-  }
-  
   @media only screen and (max-width: 500px) {
     .responsive {
       width: 100%;
