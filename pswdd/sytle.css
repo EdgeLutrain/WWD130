@@ -393,9 +393,19 @@ padding: 20px ;
     padding: 20px;
 }
 
+/* commmission */
 
 
+#img_box img {
+    width: 60%;
+    background-color: white;
+}
 
+#pricing_box #pad1 {
+
+    padding:  15px;
+
+}
 
 
 
