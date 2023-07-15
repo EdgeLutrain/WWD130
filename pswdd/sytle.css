@@ -385,7 +385,7 @@ padding: 20px ;
 .main_grid_comis {
     grid-template-columns: 1fr 1fr;
     padding: 15px;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 2fr 400px;
     gap: 10px;
 }
 .color_box {
@@ -394,6 +394,9 @@ padding: 20px ;
 }
 
 /* commmission */
+.main_grid_comis {
+  color: white;
+}
 
 
 #img_box img {
@@ -402,12 +405,21 @@ padding: 20px ;
 }
 
 #pricing_box #pad1 {
+  padding: 30px;
+  text-align: center;
+  margin: auto 0;
 
-    padding:  15px;
-
+}
+#pricing_box #pad1 ul li {
+  text-align: left;
+  font-size: large;
 }
 
 
+#oltwo li {
+  text-align: left;
+  padding: 7px;
+}
 
 
 
