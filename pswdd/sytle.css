@@ -56,6 +56,7 @@ nav a {
     color: azure;
     box-shadow: 3px 3px 6px #00000086;
     font-size: calc(10px + 1.5vw);
+    text-align: center;
 
 
 }
@@ -223,14 +224,19 @@ footer h3 {
 .sitemap ul { 
     display: flex;
     flex-direction: column;
-    text-align: center;
+    gap: .75vw;
+    
 
 }
 .sitemap { 
     padding: 10px;
 
 }
-.sitemap ul a {
+.sitemap ul li {
+  text-align: center;
+  list-style: none;
+}
+.sitemap ul li a {
     color: white;
     text-decoration: none;
     font-family:sans-serif, Arial, Helvetica, sans-serif;
