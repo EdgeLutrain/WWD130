@@ -49,32 +49,33 @@ nav a {
     border: calc(1px + .3vw) solid white;
     height: 4vw;
     padding-top: 0;
-    padding-bottom: calc(10px + 1vw);
+    padding-bottom: .9vw;
     padding-left: 1.2vw;
     padding-right: 1.2vw;
     background-color: #F46F4A;
     color: azure;
     box-shadow: 3px 3px 6px #00000086;
-    font-size: calc(10px + 1.5vw);
     text-align: center;
+    font-size: 1.5lvw;
 
 
 }
 nav a:hover {
-    max-height: 50px;
-    max-width: 281px;
-    text-decoration: none;
-    margin: auto 0;
-    border: calc(1px + .3vw) solid white;
-    height: 4vw;
-    padding-top: 0;
-    padding-bottom: calc(10px + 1vw);
-    padding-left: 1.2vw;
-    padding-right: 1.2vw;   
+  max-height: 50px;
+  max-width: 281px;
+  text-decoration: none;
+  margin: auto 0;
+  border: calc(1px + .3vw) solid white;
+  height: 4vw;
+  padding-top: 0;
+  padding-bottom: .9vw;
+  padding-left: 1.2vw;
+  padding-right: 1.2vw;
     background-color: #ce3207;
     color: azure;
     box-shadow: 3px 3px 6px #00000086;
-    font-size: calc(10px + 1.5vw);
+    text-align: center;
+    font-size: 1.5lvw;
 
 }
 nav {
@@ -90,12 +91,14 @@ nav {
 }
 
 /* gallery */ 
- main { 
+ .home_main { 
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 30px;
     margin-bottom: 1px;
   }
+
+
 div.gallery {
     border: 3px solid #ce3d15;
     background-color: #F79A7D;
@@ -158,7 +161,7 @@ div.desc {
 
 .artist section p {
     font-family:sans-serif, Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 1.5vw;
     color: white;
     padding: 5px;
 }
@@ -265,33 +268,35 @@ footer h3 {
 /* gallery */
 .gallery_page {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 175px 6fr;
 
 }
 
 .gallery3{
     display: flex;
-    flex-direction: column;
     font-family: "Shadows Into Light", Helvetica, sans-serif;
-    grid-column: 1/-1;
+    grid-column: 2/4;
     justify-content: center;
     align-content: center;
-    flex-wrap: wrap;
-    
+    flex-direction: column;
+    flex-wrap:wrap;
 }
 
-.gallery3 h2 {
-    text-align: center;
-    background: #fceeee;
-    border-radius: 30px;
-}
+
 
 #grade {
     background-image: linear-gradient(60deg, #ff9966, #ff5e62); 
     border-radius: 37px;
-    padding: 10px; 
-      
+    margin: 5px;
+
+
+
+}
+
+#grade h2{
+font-size: .9em;
+
 }
 
   
@@ -302,7 +307,7 @@ footer h3 {
   
   .row {
     margin: 8px 30px;
-    grid-column: 1/3;
+    grid-column: 1/5;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -389,10 +394,12 @@ padding: 20px ;
 }
 
 .main_grid_comis {
+  display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 15px;
     grid-template-rows: 2fr 400px;
-    gap: 10px;
+    gap: 10px;  
+    color: white;
 }
 .color_box {
     background-image: linear-gradient(60deg, #ff9966, #ff5e62);
@@ -400,9 +407,7 @@ padding: 20px ;
 }
 
 /* commmission */
-.main_grid_comis {
-  color: white;
-}
+
 
 
 #img_box img {
